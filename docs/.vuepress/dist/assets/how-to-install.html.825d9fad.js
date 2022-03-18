@@ -1,0 +1,1 @@
+const t={key:"v-03662324",path:"/documentation/getting-started/how-to-install.html",title:"How to install AMI Web Framework",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:null,contributors:[]},filePathRelative:"documentation/getting-started/how-to-install.md"};export{t as data};

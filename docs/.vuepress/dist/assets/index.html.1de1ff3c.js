@@ -1,0 +1,1 @@
+const e={key:"v-24c6767f",path:"/fr/documentation/",title:"Introduction",lang:"fr-FR",frontmatter:{},excerpt:"",headers:[{level:2,title:"Pr\xE9-requis",slug:"pre-requis",children:[]}],git:{updatedTime:1647531341e3,contributors:[{name:"Kayoshi-dev",email:"maxime.jaume@lpsc.in2p3.fr",commits:1}]},filePathRelative:"fr/documentation/README.md"};export{e as data};

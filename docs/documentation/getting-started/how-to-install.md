@@ -1,6 +1,4 @@
-# Getting started
-
-## How to install AMI Web Framework
+# How to install AMI Web Framework
 
 First, create a new directory that will contain your future project : 
 ```bash
@@ -21,15 +19,10 @@ chmod +x awf.py
 :::
 The second command is making sure you have the correct right to execute the script.
 
-Now you should be able to run the script by running this command in your terminal.
+Now you should be able to run the script by running this command in your terminal. 
 ```bash
-./awf.py
+python ./awf.py
 ```
+(On UNIX system you can just do ./awf.py)
 
-If you get welcomed by an AMI ascii art, you are ready to go !
-
-## Generate an homepage
-
-```bash
-./awf.py --create-home-page
-```
+If you get welcomed by an AMI ascii art, you are **ready** to go !
