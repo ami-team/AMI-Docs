@@ -1,4 +1,32 @@
 module.exports = {
+    head: [
+        [
+            'link',
+            {
+                rel: 'icon',
+                type: 'image/png',
+                sizes: '16x16',
+                href: `/images/icons/favicon-16x16.png`,
+            },
+        ],
+        [
+            'link',
+            {
+                rel: 'icon',
+                type: 'image/png',
+                sizes: '32x32',
+                href: `/images/icons/favicon-32x32.png`,
+            },
+        ],
+        [
+            'link',
+            {
+                rel: 'stylesheet',
+                href: 'https://fonts.googleapis.com/css2?family=Inter:wght@500;700;900&display=swap'
+            }
+        ],
+        ['link', { rel: 'manifest', href: '/manifest.webmanifest' }],
+    ],
     locales: {
         '/': {
             lang: 'en-US',
@@ -52,10 +80,19 @@ module.exports = {
                         text: 'Guide',
                         children: [
                             '/documentation/README.md',
-                            '/documentation/getting-started.md',
+                        ],
+                    },
+                    {
+                        text: 'Getting started',
+                        children: [
+                            '/documentation/getting-started/how-to-install.md',
+                            '/documentation/getting-started/generate-homepage.md',
+                            '/documentation/getting-started/generate-subapp.md',
+                            '/documentation/getting-started/generate-control.md',
                         ],
                     },
                 ],
+                sidebarDepth: 0
             },
             '/fr/': {
                 selectLanguageName: 'Français',
@@ -67,6 +104,7 @@ module.exports = {
                         buttonText: "Rafraichir"
                     }
                 },
+                backToHome: "Retourner à l'accueil"
             }
         }
     }

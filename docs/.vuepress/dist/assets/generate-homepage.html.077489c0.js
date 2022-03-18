@@ -1,0 +1,1 @@
+const e={key:"v-faef6490",path:"/documentation/getting-started/generate-homepage.html",title:"Generate an homepage",lang:"en-US",frontmatter:{},excerpt:"",headers:[{level:2,title:"Command Reference",slug:"command-reference",children:[]}],git:{updatedTime:null,contributors:[]},filePathRelative:"documentation/getting-started/generate-homepage.md"};export{e as data};
