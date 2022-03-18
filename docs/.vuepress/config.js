@@ -1,4 +1,6 @@
 module.exports = {
+    base: '/ami-docs/',
+    dest: 'public',
     head: [
         [
             'link',
