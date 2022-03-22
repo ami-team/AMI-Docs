@@ -1,7 +1,8 @@
 {
-    "name":"AMI Documentation",
-    "short_name":"AMIDoc",
-    "icons":[
+    "name": "AMI Documentation",
+    "short_name": "AMIDoc",
+    "description": "The official AMI Documentation !",
+    "icons": [
         {
             "src":"/images/icons/android-chrome-192x192.png",
             "sizes":"192x192",

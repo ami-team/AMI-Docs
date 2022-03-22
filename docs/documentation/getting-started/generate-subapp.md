@@ -1,6 +1,25 @@
 # Generate a subapp
 
-A subapp is 
+## Synopsis
+
+A subapp represent a page of your website, a subapp is often composed of different 
+[controls](/ami-docs/documentation/getting-started/generate-control.html/) (_web components_) embeded in a single page.
+
+When you create a new subapp, the router will automatically take care of creating the corresponding route, for example, if you create a subapp called "MyApp", you can access it at : `https://yourdomain.com/?subapp=MyApp`
+
+To get started with subapps, you can run the following command in your favorite terminal :
+
+```bash
+./awf.py --create-subapp
+```
+
+You will then be prompted to enter a title.
+
+This command does the following :
+* Create a new folder in the subapp folder (located in the root of your project), this new folder is named like your subapp.
+* Inside this new folder, it generated 3 files, a Javascript file, and a folder asset containing the CSS file and the TWIG file.
+* Modifies the SUBAPPS.json file. (Learn more here)
+* Update the webpack.config.js file to build the new subapp.
 
 ## Command Reference
 | Parameter             | Shorthand | Description                                           |

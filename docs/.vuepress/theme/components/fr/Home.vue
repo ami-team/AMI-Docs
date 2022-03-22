@@ -21,7 +21,7 @@
   </header>
 </template>
 
-<style>
+<style scoped>
   .gradient {
     background: #007BFF;
     background: -webkit-linear-gradient(to top left, #007BFF 0%, #9E4BCF 100%);

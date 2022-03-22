@@ -1,1 +1,0 @@
-const e={key:"v-2d0a8b4a",path:"/fr/",title:"Accueil",lang:"fr-FR",frontmatter:{home:!0,title:"Accueil",heroText:null,tagline:null,footerHtml:!0,footer:"Made by LPSC"},excerpt:"",headers:[],git:{updatedTime:1647531341e3,contributors:[{name:"Kayoshi-dev",email:"maxime.jaume@lpsc.in2p3.fr",commits:1}]},filePathRelative:"fr/README.md"};export{e as data};
