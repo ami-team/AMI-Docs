@@ -6,12 +6,12 @@
 
     <div class="features">
       <div class="feature">
-        <h2>Simplicity First</h2>
-        <p>Minimal setup with markdown-centered project structure helps you focus on writing.</p>
+        <h2>Lightweight</h2>
+        <p>AMI internally use Webpack to bundle the code.</p>
       </div>
       <div class="feature">
         <h2>Easy</h2>
-        <p>Lorem ispsum text create user interfaces.</p>
+        <p>The Python CLI automate all the boring tasks.</p>
       </div>
       <div class="feature">
         <h2>Concept</h2>
@@ -21,7 +21,7 @@
   </header>
 </template>
 
-<style>
+<style scoped>
   .gradient {
     background: #007BFF;
     background: -webkit-linear-gradient(to top left, #007BFF 0%, #9E4BCF 100%);

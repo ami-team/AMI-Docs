@@ -1,5 +1,7 @@
 # Generate an homepage
 
+## Synopsis
+
 To create a new Homepage, you can use the `--create-home-page` command. You will be prompted for a title and also an endpoint that should host an instance of the AMI Server.
 
 You can also choose which version of Bootstrap you would like to use by specifying the `--bootstrap-version`. (If not specified, Bootstrap 5 will be used).

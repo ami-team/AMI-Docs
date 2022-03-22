@@ -1,1 +1,0 @@
-import{o as e,c as t,d as o,f as r}from"./app.c67140dd.js";import{_ as a}from"./plugin-vue_export-helper.21dcd24c.js";const n={},c={id:"generate-a-control",tabindex:"-1"},s=o("a",{class:"header-anchor",href:"#generate-a-control","aria-hidden":"true"},"#",-1),_=r(" Generate a control"),d=[s,_];function i(h,l){return e(),t("h1",c,d)}var p=a(n,[["render",i]]);export{p as default};

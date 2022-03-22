@@ -133,7 +133,8 @@
 }
 
 .page {
-  background: url('/images/ami_bg.png') top 0 left 320px fixed no-repeat
+  background: url('/images/ami_bg.png') top 0 left 320px fixed no-repeat;
+  min-height: calc(100vh - 90px);
 }
 
 html.dark {

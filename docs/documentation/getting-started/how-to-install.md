@@ -7,7 +7,7 @@ mkdir myproject && cd myproject
 
 Then, we will need to get the AMI Setup file, to do this, run : 
 ```bash
-curl -L https://raw.githubusercontent.com/ami-team/awfwebpack/tools/awf_stub.py > awf.py
+curl -L https://raw.githubusercontent.com/ami-team/awfwebpack/master/tools/awf_stub.py > awf.py
 ```
 This curl command should download for you a little script that will help us with the generation of your application.
 
