@@ -5,12 +5,23 @@
   "main": "index.js",
   "scripts": {
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "prepare": "husky install"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@vuepress/plugin-pwa": "^2.0.0-beta.36",
+    "@vuepress/plugin-pwa-popup": "^2.0.0-beta.36",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.4.0",
+    "prettier": "^2.6.2",
     "vuepress": "^2.0.0-beta.36"
+  },
+  "dependencies": {
+    "vue-stripe-menu": "^2.1.1"
+  },
+  "lint-staged": {
+    "*.{js,css,md,vue}": "prettier --write"
   }
 }
