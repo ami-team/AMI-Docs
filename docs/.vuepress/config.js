@@ -1,8 +1,106 @@
-const { path } = require("@vuepress/utils");
+const { viteBundler } = require("vuepress");
+const { localTheme } = require("./theme");
 
 module.exports = {
     base: "/ami-docs/",
-    theme: path.resolve(__dirname, "./theme"),
+    theme: localTheme({
+        docsDir: "docs",
+        logo: "https://ami.in2p3.fr/images/logo.png",
+        navbar: [
+            {
+                text: "Projects",
+                children: [
+                    {
+                        text: "AMI Web Framework",
+                        link: "/docs/ami-web-framework",
+                        activeMatch: "/docs/ami-web-framework",
+                    },
+                    {
+                        text: "AMI Task Server",
+                        link: "/not-foo/",
+                    },
+                    {
+                        text: "Test",
+                        link: "add",
+                    },
+                ],
+            },
+            {
+                text: "Concepts",
+                children: [
+                    {
+                        text: "MQL",
+                        link: "/concepts/mql",
+                        activeMatch: "/concepts/mql",
+                    },
+                ],
+            },
+            {
+                text: "User guide",
+                children: [
+                    {
+                        text: "PyAMI",
+                        link: "/user-guide/pyami",
+                        activeMatch: "/user-guide/pyami",
+                    },
+                ],
+            },
+            {
+                text: "Github",
+                link: "https://github.com/ami-team/AMI-Docs",
+            },
+        ],
+        locales: {
+            "/": {
+                selectText: "Languages",
+                label: "English",
+                ariaLabel: "Languages",
+                editLinkText: "Edit this page on GitHub",
+                serviceWorker: {
+                    updatePopup: {
+                        message: "New content is available.",
+                        buttonText: "Refresh",
+                    },
+                },
+                sidebar: {
+                    "/docs/ami-web-framework": [
+                        {
+                            text: "Guide",
+                            children: ["/docs/ami-web-framework/README.md"],
+                        },
+                        {
+                            text: "Getting started",
+                            children: [
+                                "/docs/ami-web-framework/how-to-install.md",
+                                "/docs/ami-web-framework/generate-homepage.md",
+                                "/docs/ami-web-framework/generate-subapp.md",
+                                "/docs/ami-web-framework/generate-control.md",
+                            ],
+                        },
+                        {
+                            text: "Deployment",
+                        },
+                    ],
+                    "/concepts/mql": [
+                        {
+                            text: "Guide",
+                            children: ["/concepts/mql/README.md"],
+                        },
+                    ],
+                },
+                sidebarDepth: 0,
+            },
+        },
+    }),
+    bundler: viteBundler({
+        vuePluginOptions: {
+            template: {
+                compilerOptions: {
+                    isCustomElement: (tag) => tag === "center",
+                },
+            },
+        },
+    }),
     dest: "public",
     head: [
         [
@@ -37,95 +135,6 @@ module.exports = {
             lang: "en-US",
             title: "Documentation",
             description: "The official documentation for the AMI Web Framework",
-        },
-    },
-
-    themeConfig: {
-        docsDir: "docs",
-        logo: "https://ami.in2p3.fr/images/logo.png",
-        navbar: [
-            {
-                text: "Docs",
-                link: "/docs/",
-            },
-            {
-                text: "Projects",
-                children: [
-                    {
-                        text: "AMI Web Framework",
-                        icon: "https://cdn-icons-png.flaticon.com/512/246/246704.png",
-                        link: "/docs/ami-web-framework",
-                    },
-                    {
-                        text: "Active on /foo/",
-                        link: "/not-foo/",
-                    },
-                    {
-                        text: "Test",
-                        link: "add",
-                    },
-                ],
-            },
-            {
-                text: "Concepts",
-                link: "/concepts/",
-            },
-            {
-                text: "User guide",
-                link: "/user-guide/",
-            },
-            {
-                text: "Github",
-                link: "https://github.com/ami-team/AMI-Docs",
-            },
-        ],
-        locales: {
-            "/": {
-                selectText: "Languages",
-                label: "English",
-                ariaLabel: "Languages",
-                editLinkText: "Edit this page on GitHub",
-                serviceWorker: {
-                    updatePopup: {
-                        message: "New content is available.",
-                        buttonText: "Refresh",
-                    },
-                },
-                sidebar: {
-                    "/docs/": [
-                        {
-                            text: "Guide",
-                            children: ["/docs/README.md"],
-                        },
-                        {
-                            text: "Getting started",
-                            children: [
-                                "/docs/how-to-install.md",
-                                "/docs/generate-homepage.md",
-                                "/docs/generate-subapp.md",
-                                "/docs/generate-control.md",
-                            ],
-                        },
-                    ],
-                    "/docs/ami-web-framework": [
-                        {
-                            text: "Palalala",
-                            children: ["/docs/ami-web-framework/README.md"],
-                        },
-                    ],
-                    "/concepts/": [
-                        {
-                            text: "Guide",
-                            children: ["/concepts/README.md"],
-                        },
-                        {
-                            text: "test",
-                            children: ["/concepts/test.md"],
-                        },
-                    ],
-                },
-                sidebarDepth: 0,
-            },
         },
     },
 };
