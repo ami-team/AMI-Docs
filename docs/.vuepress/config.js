@@ -15,36 +15,32 @@ module.exports = {
                         link: "/docs/ami-web-framework",
                         activeMatch: "/docs/ami-web-framework",
                     },
-                    {
-                        text: "AMI Task Server",
-                        link: "/not-foo/",
-                    },
-                    {
-                        text: "Test",
-                        link: "add",
-                    },
+                    // {
+                    //     text: "AMI Task Server",
+                    //     link: "/not-foo/",
+                    // },
                 ],
             },
-            {
-                text: "Concepts",
-                children: [
-                    {
-                        text: "MQL",
-                        link: "/concepts/mql",
-                        activeMatch: "/concepts/mql",
-                    },
-                ],
-            },
-            {
-                text: "User guide",
-                children: [
-                    {
-                        text: "PyAMI",
-                        link: "/user-guide/pyami",
-                        activeMatch: "/user-guide/pyami",
-                    },
-                ],
-            },
+            // {
+            //     text: "Concepts",
+            //     children: [
+            //         {
+            //             text: "MQL",
+            //             link: "/concepts/mql",
+            //             activeMatch: "/concepts/mql",
+            //         },
+            //     ],
+            // },
+            // {
+            //     text: "User guide",
+            //     children: [
+            //         {
+            //             text: "PyAMI",
+            //             link: "/user-guide/pyami",
+            //             activeMatch: "/user-guide/pyami",
+            //         },
+            //     ],
+            // },
             {
                 text: "Github",
                 link: "https://github.com/ami-team/AMI-Docs",
