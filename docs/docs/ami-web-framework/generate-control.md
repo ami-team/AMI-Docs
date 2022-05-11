@@ -14,9 +14,9 @@ To get started with controls, run the following command in your terminal :
 As for the [subapps](/ami-docs/documentation/getting-started/generate-subapp.html/), you will be prompted for a title,
 and the command will automatically generate necessary files for you :
 
--   Creates a new folder in the subapp folder (located in the root of your project). This new folder is named like your subapp.
+-   Creates a new folder in the controls folder (located in the root of your project). This new folder is named like your control.
 -   Inside this new folder, 3 files are generated, a Javascript file and a folder asset containing a CSS file and a TWIG file.
--   Modifies the SUBAPPS.json file. (Learn more here)
+-   Modifies the CONTROLS.json file. (Learn more here)
 -   Updates the webpack.config.js file to build the new subapp.
 
 ## Command Reference

@@ -8,7 +8,7 @@ module.exports = {
         logo: "https://ami.in2p3.fr/images/logo.png",
         navbar: [
             {
-                text: "Projects",
+                text: "Technical Guide",
                 children: [
                     {
                         text: "AMI Web Framework",
@@ -65,13 +65,17 @@ module.exports = {
                             children: ["/docs/ami-web-framework/README.md"],
                         },
                         {
-                            text: "Getting started",
+                            text: "Essentials",
                             children: [
                                 "/docs/ami-web-framework/how-to-install.md",
                                 "/docs/ami-web-framework/generate-homepage.md",
                                 "/docs/ami-web-framework/generate-subapp.md",
                                 "/docs/ami-web-framework/generate-control.md",
                             ],
+                        },
+                        {
+                            text: "Advanced Concepts",
+                            children: ["/docs/ami-web-framework/lifecycle.md"],
                         },
                         {
                             text: "Deployment",
