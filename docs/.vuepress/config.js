@@ -12,8 +12,8 @@ module.exports = {
                 children: [
                     {
                         text: "AMI Web Framework",
-                        link: "/docs/ami-web-framework",
-                        activeMatch: "/docs/ami-web-framework",
+                        link: "/docs/ami-web-framework/",
+                        activeMatch: "/docs/ami-web-framework/",
                     },
                     // {
                     //     text: "AMI Task Server",
@@ -75,7 +75,10 @@ module.exports = {
                         },
                         {
                             text: "Advanced Concepts",
-                            children: ["/docs/ami-web-framework/lifecycle.md"],
+                            children: [
+                                "/docs/ami-web-framework/lifecycle.md",
+                                "/docs/ami-web-framework/api-reference.md",
+                            ],
                         },
                         {
                             text: "Deployment",
