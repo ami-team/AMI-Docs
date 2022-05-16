@@ -26,6 +26,24 @@ Note that the onReady event can also take a parameter which represents the userd
 
 ## onRefresh
 
+## onRemove
+
+When an AMI Control is removed, an event is fired, and you can listen to it by implementing an `onRemove`
+
+```js
+$AMIClass("CommandApp", {
+    $extends: ami.SubApp,
+
+    $init: function () {
+        this.$super.$init();
+    },
+
+    onRemove: function () {
+        amiWebApp.success("Bye!", true);
+    },
+});
+```
+
 ## onLogin
 
 ## onLogout

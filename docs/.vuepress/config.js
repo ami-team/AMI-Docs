@@ -82,6 +82,7 @@ module.exports = {
                         },
                         {
                             text: "Deployment",
+                            children: ["/docs/ami-web-framework/docker.md"],
                         },
                     ],
                     "/concepts/mql": [
@@ -91,7 +92,7 @@ module.exports = {
                         },
                     ],
                 },
-                sidebarDepth: 0,
+                sidebarDepth: 2,
             },
         },
     }),
