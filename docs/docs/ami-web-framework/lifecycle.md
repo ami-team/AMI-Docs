@@ -26,6 +26,27 @@ Note that the onReady event can also take a parameter which represents the userd
 
 ## onRefresh
 
+This event is called when the toolbar needs to be updated.
+
+This function takes as a parameter a Boolean that indicates whether the user is logged or not.
+
+```js
+$AMIClass("CommandApp", {
+    $extends: ami.SubApp,
+
+    $init: function () {
+        this.$super.$init();
+    },
+
+    onRemove: function (isAuth) {
+        amiWebApp.success(
+            isAuth ? "User is authenticated" : "User is not authenticated",
+            true
+        );
+    },
+});
+```
+
 ## onRemove
 
 When an AMI Control is removed, an event is fired, and you can listen to it by implementing an `onRemove`
