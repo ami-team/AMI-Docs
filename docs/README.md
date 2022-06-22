@@ -5,8 +5,7 @@ heroText: null
 tagline: null
 
 footerHtml: true
-footer:
-  Made by LPSC
+footer: Made by LPSC
 ---
 
 <script setup>

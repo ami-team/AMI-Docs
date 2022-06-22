@@ -8,12 +8,12 @@ module.exports = {
         logo: "https://ami.in2p3.fr/images/logo.png",
         navbar: [
             {
-                text: "Projects",
+                text: "Technical Guide",
                 children: [
                     {
                         text: "AMI Web Framework",
-                        link: "/docs/ami-web-framework",
-                        activeMatch: "/docs/ami-web-framework",
+                        link: "/docs/ami-web-framework/",
+                        activeMatch: "/docs/ami-web-framework/",
                     },
                     // {
                     //     text: "AMI Task Server",
@@ -65,7 +65,7 @@ module.exports = {
                             children: ["/docs/ami-web-framework/README.md"],
                         },
                         {
-                            text: "Getting started",
+                            text: "Essentials",
                             children: [
                                 "/docs/ami-web-framework/how-to-install.md",
                                 "/docs/ami-web-framework/generate-homepage.md",
@@ -74,7 +74,15 @@ module.exports = {
                             ],
                         },
                         {
+                            text: "Advanced Concepts",
+                            children: [
+                                "/docs/ami-web-framework/lifecycle.md",
+                                "/docs/ami-web-framework/api-reference.md",
+                            ],
+                        },
+                        {
                             text: "Deployment",
+                            children: ["/docs/ami-web-framework/docker.md"],
                         },
                     ],
                     "/concepts/mql": [
@@ -84,7 +92,7 @@ module.exports = {
                         },
                     ],
                 },
-                sidebarDepth: 0,
+                sidebarDepth: 2,
             },
         },
     }),

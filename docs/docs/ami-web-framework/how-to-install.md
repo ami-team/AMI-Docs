@@ -1,5 +1,9 @@
 # How to install AMI Web Framework
 
+::: warning
+If you haven't set up yet a backend server with AMI, you should probably take a look at this documentation.
+:::
+
 First, create a new directory that will contain your future project :
 
 ```bash
