@@ -132,7 +132,7 @@ module.exports = {
                 href: "https://fonts.googleapis.com/css2?family=Inter:wght@500;700;900&display=swap",
             },
         ],
-        ["link", { rel: "manifest", href: "/manifest.webmanifest" }],
+        ["link", { rel: "manifest", href: "/ami-docs/manifest.webmanifest" }],
     ],
     locales: {
         "/": {
