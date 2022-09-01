@@ -77,6 +77,7 @@ module.exports = {
                             text: "Advanced Concepts",
                             children: [
                                 "/docs/ami-web-framework/lifecycle.md",
+                                "/docs/ami-web-framework/using-code-mirror-with-ami.md",
                                 "/docs/ami-web-framework/api-reference.md",
                             ],
                         },

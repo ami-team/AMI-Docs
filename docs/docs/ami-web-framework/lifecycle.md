@@ -67,4 +67,22 @@ $AMIClass("CommandApp", {
 
 ## onLogin
 
+The code contained inside the onLogin event will only be executed when the user is logged in. This allows you to secure parts of your application.
+
 ## onLogout
+
+The onLogout event allows you to execute run code that should only be executed when the user is not logged in.
+
+```js
+$AMIClass("CommandApp", {
+    $extends: ami.SubApp,
+
+    $init: function () {
+        this.$super.$init();
+    },
+
+    onLogout: function () {
+        amiWebApp.success("I'm a guest user!", true);
+    },
+});
+```
