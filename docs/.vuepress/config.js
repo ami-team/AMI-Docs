@@ -21,16 +21,16 @@ module.exports = {
                     // },
                 ],
             },
-            // {
-            //     text: "Concepts",
-            //     children: [
-            //         {
-            //             text: "MQL",
-            //             link: "/concepts/mql",
-            //             activeMatch: "/concepts/mql",
-            //         },
-            //     ],
-            // },
+			{
+				text: "Concepts",
+				children: [
+					{
+						text: "MQL",
+						link: "/concepts/mql",
+						activeMatch: "/concepts/mql",
+					},
+				],
+			},
             // {
             //     text: "User guide",
             //     children: [
