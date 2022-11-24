@@ -189,3 +189,7 @@ html.dark .DocSearch {
 html.dark .page {
     background: url("/images/ami_bg_dark.png") top 0 left 320px fixed no-repeat;
 }
+
+.page > div.theme-default-content:not(.custom), .page-meta, .page-nav {
+    max-width: 85%;
+}

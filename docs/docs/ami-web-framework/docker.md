@@ -32,3 +32,7 @@ services:
 ```
 
 You can pass two environment variables to your docker-compose.yml file to adjust the title of your homepage and the endpoint.
+
+From there, you can access to the frontend of your application :
+
+`http://localhost:80/`

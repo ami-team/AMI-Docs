@@ -1,8 +1,7 @@
-const { viteBundler } = require("vuepress");
-const { localTheme } = require("./theme");
+import { viteBundler } from "vuepress";
+import { localTheme } from "./theme";
 
-module.exports = {
-    base: "/ami-docs/",
+export default {
     theme: localTheme({
         docsDir: "docs",
         logo: "https://ami.in2p3.fr/images/logo.png",
@@ -15,10 +14,11 @@ module.exports = {
                         link: "/docs/ami-web-framework/",
                         activeMatch: "/docs/ami-web-framework/",
                     },
-                    // {
-                    //     text: "AMI Task Server",
-                    //     link: "/not-foo/",
-                    // },
+                    {
+                        text: "AMI Server",
+                        link: "/docs/ami-server",
+                        activeMatch: "/docs/ami-server/",
+                    },
                 ],
             },
 			{
@@ -84,6 +84,15 @@ module.exports = {
                         {
                             text: "Deployment",
                             children: ["/docs/ami-web-framework/docker.md"],
+                        },
+                    ],
+                    "/docs/ami-server": [
+                        {
+                            text: "Getting started",
+                            children: [
+                                "/docs/ami-server/README.md",
+                                "/docs/ami-server/installation.md",
+                            ],
                         },
                     ],
                     "/concepts/mql": [

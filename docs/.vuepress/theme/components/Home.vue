@@ -7,7 +7,7 @@
             ATLAS <span class="gradient">Metadata</span> Interface
         </h1>
         <p class="description">
-            The official documentation for the AMI Web Framework
+            The official documentation for the AMI Ecosystem
         </p>
 
         <div class="features">
