@@ -31,8 +31,8 @@ WHERE parents.id = children.parentFK AND children.age >= 10
 
 MQL queries are using entity paradigms.
 
-- "parents" represent... the parents.
-- "children" represent... the children.
+- "parents" represents... the parents.
+- "children" represents... the children.
 - "name" and "age" are respectively two characteristic of these human people
 
 The MQL system knows the relation between some parents and their children.
