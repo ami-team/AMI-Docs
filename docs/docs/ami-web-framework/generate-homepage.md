@@ -3,7 +3,7 @@
 ## Synopsis
 
 To create a new Homepage, you can use the `--create-home-page` command. You will be prompted for a title and an endpoint
-that should host an instance of the AMI Server.
+that should expose an instance of the AMI Server.
 
 For example :
 

@@ -1,7 +1,7 @@
 <template>
     <div v-for="(section, name) in myJSDoc">
         <div class="accordion" @click="openPanel" v-if="name !== 'default'">
-            <h2>
+            <h2 style="padding-top: 0; margin-top: 0">
                 {{ name.charAt(0).toUpperCase() + name.slice(1) }}
             </h2>
 
@@ -20,7 +20,10 @@
         </div>
 
         <div class="panel" v-if="name === 'functions'" v-for="func in section">
-            <h4 :id="func.name" style="margin: 0; font-size: 1.5rem">
+            <h4
+                :id="func.name"
+                style="margin: 0; padding-top: 0; font-size: 1.5rem"
+            >
                 <a
                     class="header-anchor"
                     :href="`#${func.name}`"
@@ -46,7 +49,7 @@
             </p>
 
             <div v-if="func.params.length > 0">
-                <h5 style="margin: 0">Parameters</h5>
+                <h5 style="margin: 0; padding-top: 0">Parameters</h5>
                 <table style="width: 100%; margin-bottom: 2rem">
                     <tr>
                         <th>Name</th>
@@ -65,7 +68,10 @@
         </div>
 
         <div class="panel" v-else v-for="part in section">
-            <h4 :id="part.name" style="margin: 0; font-size: 1.5rem">
+            <h4
+                :id="part.name"
+                style="margin: 0; padding-top: 0; font-size: 1.5rem"
+            >
                 <a
                     class="header-anchor"
                     :href="`#${part.name}`"
@@ -102,7 +108,7 @@
                 </p>
 
                 <div v-if="functions.params.length > 0">
-                    <h5 style="margin: 0">Parameters</h5>
+                    <h5 style="margin: 0; padding-top: 0">Parameters</h5>
                     <table style="width: 100%; margin-bottom: 2rem">
                         <tr>
                             <th>Name</th>

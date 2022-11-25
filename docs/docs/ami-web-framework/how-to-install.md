@@ -5,7 +5,7 @@
 ::: warning
 If you haven't set up yet a backend server with AMI, you should probably [start here]().
 
-Note that you can use our [All in One starter with Docker]()
+Note that you can also use our [All in One starter with Docker](), which might be easier and faster !
 :::
 
 First, create a new directory that will contain your future project :
@@ -57,7 +57,6 @@ Once this command is finished you should have the following file structure :
 ami-sample
 │── awf.py
 │── favicon.ico
-│── index.html
 │── package.json
 │── webpack.config.js
 └───controls
@@ -81,18 +80,26 @@ Your project now have 5 folders :
 -   **docs** : This folder contains default web pages, for example 404 page..
 -   **js** : Commonly called _dist_ or _build_, this folder will contains your minified and transpiled files.
 
-Now that your project is generated, you can start your application with the following command
+Now that your project is generated, you just need to create an homepage with the following command, more on that subject in the [next section](./generate-homepage.md)
+
+```bash
+./awf.py --create-home-page
+```
+
+This will create an index.html file and fill it with your values.
+
+You can then start your application with the following command :
 
 ```bash
 python awf.py --run
 ```
 
-This should automatically create a web server and open a webpage on http://localhost:8000/.
+This should automatically create a web server and open a webpage on **http://localhost:8000/**.
 
-If you correctly configured your AMI Server, you should see your new homepage, otherwise you might see a toast alert saying "resource temporarily unreachable".
+If you correctly configured the endpoint of your AMI Server, you should see your new homepage, otherwise you might see a toast alert saying "resource temporarily unreachable".
 
 If that's the case you can head to the documentation of the [AMI Server](../ami-server/README.md) to learn how to set it up.
 
 ::: tip Information
-You might want to check out at our [All in One AMI starter](), it creates an AMI Web Framework project and AMI Server in one command with Docker !
+Note that you can modify the endpoint whenever you want by going in the index.html file and by modifying the **endpoint_url** in the options of the _amiWebApp.start_ function.
 :::
