@@ -2,6 +2,7 @@ import { viteBundler } from "vuepress";
 import { localTheme } from "./theme";
 
 export default {
+    base: "/ami-docs/",
     theme: localTheme({
         docsDir: "docs",
         logo: "https://ami.in2p3.fr/images/logo.png",
@@ -21,16 +22,16 @@ export default {
                     },
                 ],
             },
-			{
-				text: "Concepts",
-				children: [
-					{
-						text: "MQL",
-						link: "/concepts/mql",
-						activeMatch: "/concepts/mql",
-					},
-				],
-			},
+            {
+                text: "Concepts",
+                children: [
+                    {
+                        text: "MQL",
+                        link: "/concepts/mql",
+                        activeMatch: "/concepts/mql",
+                    },
+                ],
+            },
             // {
             //     text: "User guide",
             //     children: [
