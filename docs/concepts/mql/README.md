@@ -81,7 +81,7 @@ QIds could be :
     - Its SQL equivalent is a column of a table
 
 ### Constraint
-QIds syntax is very similar to SQL "table.field" syntax. Nevertheless, as with MQL there is no FROM clause nor JOIN, the same QId could have several meanings depending on the context.
+QIds syntax is very similar to SQL "table.column" syntax. Nevertheless, as with MQL there is no FROM clause nor JOIN, the same QId could have several meanings depending on the context.
 
 Let's take as an example this MQL query.
 ```sql
