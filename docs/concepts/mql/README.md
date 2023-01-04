@@ -9,14 +9,14 @@ Dedicated to non-experts, MQL provides a way for querying data with a simplified
 
 ### A concrete scenario
 
-You are the boss of the "AMI Music" resellers company. 
+You are the boss of the "AMI Music" resellers company.
 All the commercial data are store in the following database schema:
 
 ![Demo database schema](./img/demoDB.png "Demo database schemao")
 
 
-This schema represents how the various information are structured and linked. 
-- Your company has employees who take care of your customers. 
+This schema represents how the various information are structured and linked.
+- Your company has employees who take care of your customers.
 - Your customers could buy tracks from album of various artists.
 - Your customers have some preferences concerning their favorite music genres but of course could buy any track.
 
@@ -43,8 +43,8 @@ An SQL expert knows that the content of "Customer" and "Employee" tables are lin
 **Knowing the structure of the database, an expert would write the following SQL query to answer to the boss question:**
 
 ```sql
-SELECT Employee.LastName, Employee.FirstName 
-FROM Employee, Customers 
+SELECT Employee.LastName, Employee.FirstName
+FROM Employee, Customers
 WHERE Employee.EmployeeId = Customer.SupportRepId AND Customer.City = 'New-York'
 ```
 ### MQL query
@@ -60,15 +60,58 @@ The MQL system extract automatically the relations between the employees and the
 **Ignoring how the data are stored, an end-user would just write the following MQL query close to a spoken langage:**
 
 ```sql
-SELECT Employee.LastName, Employee.FirstName 
-WHERE Customer.City = 'New-York' 
+SELECT Employee.LastName, Employee.FirstName
+    WHERE Customer.City = 'New-York' 
 ```
 
 # The MQL langage
 ## MQL grammar and concept
+The MQL defines grammar and provides concept to interact with any relational data source. It
+allows one to perform generic selection, insertion, modification and deletion operations,
+keeping benefits of the underlying relational model, but with a syntax less verbose of SQL.
 ### Qids
+MQL introduces the notion of basic Qualified Identifier (QId) for representing data store in a catalogue.
+
+QIds could be :
+- An **entity** representing a category of data in the catalog having some properties.
+    - Its syntax is: **[catalogue.]entity**.
+    - Its SQL equivalent is a table.
+- A **field** representing a property of an entity and having a value.
+    - Its syntax is: **[[catalogue.]entity.]field**
+    - Its SQL equivalent is a column of a table
+
 ### Constraint
-### Isolation 
+QIds syntax is very similar to SQL "table.field" syntax. Nevertheless, as with MQL there is no FROM clause nor JOIN, the same QId could have several meanings depending on the context.
+
+Let's take as an example this MQL query.
+```sql
+SELECT Genre.Name
+WHERE Customer.City = 'New-York'
+```
+
+It will return some results... but looking at the "AMI Music" catalog schema they could have several meanings. Results could be:
+- The set of music genre the customers from New-York city bought, following the **path** Customer > Invoice > InvoiceLine > Track > Genre
+- The set of music genre the customers from New-York city prefer, following the **path** Customer > Preference > Genre
+
+MQL constraints are defined to solve this paradox. They could be added inside brackets to any QId in an MQL query.
+- The constraint syntax is: **{[!][[catalogue.]entity.]field, ...}**
+
+If the boss wants to know the genre preferences of New-York city customers, one could write
+
+```sql
+SELECT Genre.Name
+WHERE Customer.City{Preference.CustomerId} = 'New-York'
+```
+or
+
+```sql
+SELECT Genre.Name
+WHERE Customer.City{!Invoice.CustomerId} = 'New-York'
+```
+
+Basically, a constraint could be seen as an authorized or forbidden path to navigate from an entity to another in a graph.
+
+### Isolation
 ## Query Syntax
 ### SELECT
 ### UPDATE
