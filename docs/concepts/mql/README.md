@@ -12,8 +12,9 @@ Dedicated to non-experts, MQL provides a way for querying data with a simplified
 You are the boss of the "AMI Music" resellers company.
 All the commercial data are store in the following database schema:
 
-![Demo database schema](./img/demoDB.png "Demo database schemao")
 
+![Demo database schema](./img/demoDB.png)<br>
+_Fig 1. Database schema_
 
 This schema represents how the various information are structured and linked.
 - Your company has employees who take care of your customers.
@@ -69,16 +70,19 @@ SELECT Employee.LastName, Employee.FirstName
 The MQL defines grammar and provides concept to interact with any relational data source. It
 allows one to perform generic selection, insertion, modification and deletion operations,
 keeping benefits of the underlying relational model, but with a syntax less verbose of SQL.
-### Qids
-MQL introduces the notion of basic Qualified Identifier (QId) for representing data store in a catalogue.
+### QIds
+MQL introduces the notion of Qualified Identifier (QId) for representing data store in a catalogue.
 
 QIds could be :
 - An **entity** representing a category of data in the catalog having some properties.
-    - Its syntax is: **[catalogue.]entity**.
+    - Its syntax is: **[catalog.]entity**.
     - Its SQL equivalent is a table.
 - A **field** representing a property of an entity and having a value.
-    - Its syntax is: **[[catalogue.]entity.]field**
+    - Its syntax is: **[[catalog.]entity.]field**
     - Its SQL equivalent is a column of a table
+
+![basic QId Syntax](./img/RR1.svg)<br>
+_Fig 2. QId syntax_
 
 ### Constraint
 QIds syntax is very similar to SQL "table.column" syntax. Nevertheless, as with MQL there is no FROM clause nor JOIN, the same QId could have several meanings depending on the context.
@@ -94,7 +98,10 @@ It will return some results... but looking at the "AMI Music" catalog schema the
 - The set of music genre the customers from New-York city prefer, following the **path** Customer > Preference > Genre
 
 MQL constraints are defined to solve this paradox. They could be added inside brackets to any QId in an MQL query.
-- The constraint syntax is: **{[!][[catalogue.]entity.]field, ...}**
+- The constraint syntax is: **QId{[!][[catalogue.]entity.]field, ...}**
+
+![Constraint on QId Syntax](./img/RR2.svg)<br>
+_Fig 3. QId constraint syntax_
 
 If the boss wants to know the genre preferences of New-York city customers, one could write
 
@@ -109,10 +116,10 @@ SELECT Genre.Name
 WHERE Customer.City{!Invoice.CustomerId} = 'New-York'
 ```
 
-Basically, a constraint could be seen as an authorized or forbidden path to navigate from an entity to another in a graph.
+Basically, a constraint could be seen as an authorized or forbidden path to navigate from an entity to another in a graph representing a relational database.
 
 ### Isolation
 ## Query Syntax
 ### SELECT
 ### UPDATE
-### DELETE 
+### DELETE
