@@ -1,3 +1,7 @@
+<script setup>
+  import RailroadDiagram from '../../../../theme/components/RailroadDiagram.vue'
+</script>
+
 # Introduction
 ## What is MQL ?
 MQL is a domain specific language for executing queries on a Relational DataBase Management System (RDBMS) closely to spoken language.  
@@ -81,7 +85,26 @@ QIds could be :
     - Its syntax is: **[[catalog.]entity.]field**
     - Its SQL equivalent is a column of a table
 
-![basic QId Syntax](./img/RR1.svg)<br>
+<RailroadDiagram data="
+Diagram(
+  Optional
+  (
+    Sequence
+    (
+      Optional
+      (
+        Sequence('catalog', '.'),
+        'skip'
+      ),
+    'entity',
+    '.'
+    ),
+  'skip'
+  ),
+  Terminal('field')
+);
+"/>
+
 _Fig 2. QId syntax_
 
 ### Constraint
@@ -100,7 +123,33 @@ It will return some results... but looking at the "AMI Music" catalog schema the
 MQL constraints are defined to solve this paradox. They could be added inside brackets to any QId in an MQL query.
 - The constraint syntax is: **QId{[!][[catalogue.]entity.]field, ...}**
 
-![Constraint on QId Syntax](./img/RR2.svg)<br>
+<RailroadDiagram data="
+Diagram
+(
+  Terminal('QId'),
+  Optional
+  (
+    Sequence
+    (
+      '{',
+      OneOrMore(
+        Sequence
+        (
+          Optional
+          (
+            '!',
+            'skip'
+          ),
+          'QId'
+        ),
+        ','),
+      '}'
+    ),
+    'skip'
+  ),
+);
+"/>
+
 _Fig 3. QId constraint syntax_
 
 If the boss wants to know the genre preferences of New-York city customers, one could write

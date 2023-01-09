@@ -20,5 +20,8 @@
     },
     "lint-staged": {
         "*.{js,css,md,vue}": "prettier --write"
+    },
+    "dependencies": {
+        "railroad-diagrams": "^1.0.0"
     }
 }
